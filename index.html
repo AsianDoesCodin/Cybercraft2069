@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Cybercraft2069 is a cyberpunk Minecraft MMO modpack server set in Linefield City, with gigs, jobs, transport upgrades, apartments, TACZ guns, shaders, BlueMap, and live player status."
+    >
+    <title>Cybercraft2069 | Cyberpunk Minecraft Server</title>
+    <link rel="icon" type="image/png" href="assets/site-logo.png">
+    <link rel="apple-touch-icon" href="assets/site-logo.png">
+    <link rel="preconnect" href="https://api.mcsrvstat.us">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="scanline" aria-hidden="true"></div>
+
+    <header class="site-header" data-header>
+      <a class="brand" href="#home" aria-label="Cybercraft2069 home">
+        <span class="brand-mark" aria-hidden="true">
+          <img class="brand-mark-image" src="assets/site-logo.png" alt="">
+        </span>
+        <span>
+          <strong>Cybercraft2069</strong>
+          <small>modded multiplayer</small>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-nav-toggle>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-nav" aria-label="Primary navigation" data-nav>
+        <a href="#home" data-route-link>Home</a>
+        <a href="#ranks" data-route-link>Ranks</a>
+        <a href="#live" data-route-link>Live</a>
+        <a href="#jobs" data-route-link>Jobs</a>
+        <a href="#media" data-route-link>Media</a>
+        <a href="http://144.76.87.106:25643/#world:2332:0:847:2250:0:0:0:0:perspective" target="_blank" rel="noreferrer">Map</a>
+      </nav>
+
+      <div class="header-actions">
+        <span class="status-chip" data-server-chip>
+          <span class="status-dot" aria-hidden="true"></span>
+          <span data-chip-text>Checking</span>
+        </span>
+        <button class="btn btn-small btn-primary" type="button" data-copy-ip>Copy IP</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="page active" id="home" data-page="home" aria-labelledby="home-title">
+        <section class="hero">
+          <canvas id="cityCanvas" aria-hidden="true"></canvas>
+          <div class="hero-grid" aria-hidden="true"></div>
+          <div class="hero-content">
+            <p class="eyebrow">Linefield City is live</p>
+            <h1 id="home-title" class="cyber-logo" aria-label="Cybercraft2069">
+              <span>Cybercraft</span>
+              <strong>2069</strong>
+            </h1>
+            <p class="hero-copy">
+              Cybercraft2069 is a cyberpunk MMO Minecraft experience where players start low in Linefield City,
+              do gigs, take jobs, upgrade transportation, and work their way toward managing districts.
+            </p>
+            <div class="hero-actions">
+              <button class="btn btn-primary" type="button" data-copy-ip>Copy Server IP</button>
+              <a class="btn btn-secondary" href="#live" data-route-link>View Live Status</a>
+              <a class="btn btn-secondary" href="https://www.curseforge.com/minecraft/modpacks/cybercraft2069" target="_blank" rel="noreferrer">Install Modpack</a>
+              <a class="btn btn-secondary" href="http://144.76.87.106:25643/#world:2332:0:847:2250:0:0:0:0:perspective" target="_blank" rel="noreferrer">Open BlueMap</a>
+            </div>
+            <dl class="hero-stats" aria-label="Server highlights">
+              <div>
+                <dt data-online-count>--</dt>
+                <dd>online now</dd>
+              </div>
+              <div>
+                <dt>1.20.1</dt>
+                <dd>Fabric modpack</dd>
+              </div>
+              <div>
+                <dt>Map</dt>
+                <dd>BlueMap enabled</dd>
+              </div>
+            </dl>
+          </div>
+        </section>
+
+        <section class="band intro-band" aria-label="Cybercraft2069 overview">
+          <div class="section-inner split">
+            <div>
+              <p class="eyebrow">Server identity</p>
+              <h2>A cyberpunk MMO server in Linefield City.</h2>
+            </div>
+            <div class="intro-copy">
+              <p>
+                The modpack page describes Cybercraft2069 as an MMO cyberpunk experience. Players begin by doing
+                gigs, choose from multiple jobs, upgrade transportation over time, rent apartments, and explore
+                the city with friends.
+              </p>
+              <p>
+                The pack uses Minecraft 1.20.1 with Fabric. It includes TACZ guns, flying cars, Automobility cars,
+                TV and advertisement boards, projectors, dancing Joi holograms, Nostalgia shaders, and Patrix texture.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="band feature-band" aria-labelledby="features-title">
+          <div class="section-inner">
+            <div class="section-heading">
+              <p class="eyebrow">Modpack features</p>
+              <h2 id="features-title">What Cybercraft2069 actually advertises</h2>
+            </div>
+            <div class="feature-grid">
+              <article class="feature-card">
+                <span class="card-code">01</span>
+                <h3>Gigs And Jobs</h3>
+                <p>Restaurant work, plant farming, delivery, fishing, and replicant hunting are listed jobs and features.</p>
+              </article>
+              <article class="feature-card">
+                <span class="card-code">02</span>
+                <h3>Transportation</h3>
+                <p>The server advertises metro systems, flying cars, Automobility cars, and upgrades over time.</p>
+              </article>
+              <article class="feature-card">
+                <span class="card-code">03</span>
+                <h3>City Living</h3>
+                <p>Apartments for rent, advertisement boards, projectors, and hologram nightlife support the city mood.</p>
+              </article>
+              <article class="feature-card">
+                <span class="card-code">04</span>
+                <h3>Live Tools</h3>
+                <p>Use this site to copy the server IP, check live status, open BlueMap, and install the CurseForge modpack.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="band terminal-band" aria-labelledby="join-title">
+          <div class="section-inner join-layout">
+            <div>
+              <p class="eyebrow">Deploy client</p>
+              <h2 id="join-title">Join the city</h2>
+              <p>
+                Install the Cybercraft2069 modpack through CurseForge, then connect to the live server address.
+              </p>
+            </div>
+            <div class="terminal-panel" role="group" aria-label="Connection details">
+              <div class="terminal-top">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="terminal-line">
+                <span class="prompt">$</span>
+                <span>connect</span>
+                <strong data-server-host>144.76.87.106:25658</strong>
+              </div>
+              <div class="terminal-actions">
+                <button class="btn btn-secondary full-width" type="button" data-copy-ip>Copy address</button>
+                <a class="btn btn-secondary full-width" href="https://www.curseforge.com/minecraft/modpacks/cybercraft2069" target="_blank" rel="noreferrer">Install modpack</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="page" id="ranks" data-page="ranks" aria-labelledby="ranks-title">
+        <section class="subpage-hero">
+          <div class="section-inner">
+            <p class="eyebrow">City ladder</p>
+            <h1 id="ranks-title">Ranks</h1>
+            <p>Three mob-style rank tiers for players climbing from VIP status to the top of the city hierarchy.</p>
+          </div>
+        </section>
+        <section class="band">
+          <div class="section-inner">
+            <div class="rank-grid">
+              <article class="district-card rank-card rank-card-runner">
+                <span>Tier 01</span>
+                <h2>VIP</h2>
+                <p>
+                  The first premium step for players who want a sharper presence, smoother progression,
+                  and a more recognized place in the city.
+                </p>
+                <ul class="rank-perks" aria-label="VIP benefits">
+                  <li>Priority access to starter gigs and city-side delivery routes.</li>
+                  <li>Extra apartment slot for players building a first foothold in the city.</li>
+                  <li>Custom chat tag that marks VIP status across the server.</li>
+                </ul>
+              </article>
+
+              <article class="district-card rank-card rank-card-ghost">
+                <span>Tier 02</span>
+                <h2>Boss</h2>
+                <p>
+                  A stronger rank for players running bigger operations, with better movement,
+                  better returns, and more authority across the city.
+                </p>
+                <ul class="rank-perks" aria-label="Boss benefits">
+                  <li>Expanded home and warp options for faster movement between districts.</li>
+                  <li>Improved job payout multiplier for players managing steady income routes.</li>
+                  <li>Exclusive rank styling in chat and the live player list.</li>
+                </ul>
+              </article>
+
+              <article class="district-card rank-card rank-card-overseer">
+                <span>Tier 03</span>
+                <h2>Kingpin</h2>
+                <p>
+                  The top-tier rank for players who want the highest-status identity and the strongest
+                  sense of control over city life.
+                </p>
+                <ul class="rank-perks" aria-label="Kingpin benefits">
+                  <li>Highest transport convenience tier with expanded travel and property limits.</li>
+                  <li>Priority queue placement during peak server hours.</li>
+                  <li>Elite rank badge built for a clear top-of-the-food-chain presence.</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="page" id="live" data-page="live" aria-labelledby="live-title">
+        <section class="subpage-hero">
+          <div class="section-inner">
+            <p class="eyebrow">Server pulse</p>
+            <h1 id="live-title">Live Status</h1>
+            <p>Current server reachability, player count, known player names, version, and BlueMap access.</p>
+          </div>
+        </section>
+
+        <section class="band">
+          <div class="section-inner live-grid">
+            <article class="status-panel">
+              <div class="panel-title-row">
+                <div>
+                  <p class="eyebrow">Network</p>
+                  <h2>Server Status</h2>
+                </div>
+                <button class="btn btn-small btn-secondary" type="button" data-refresh-status>Refresh</button>
+              </div>
+              <div class="status-metrics">
+                <div>
+                  <span class="metric-label">State</span>
+                  <strong data-status-state>Checking</strong>
+                </div>
+                <div>
+                  <span class="metric-label">Players</span>
+                  <strong data-status-players>-- / --</strong>
+                </div>
+                <div>
+                  <span class="metric-label">Version</span>
+                  <strong data-status-version>Unknown</strong>
+                </div>
+                <div>
+                  <span class="metric-label">Updated</span>
+                  <strong data-status-updated>--</strong>
+                </div>
+              </div>
+              <p class="motd" data-status-motd>Waiting for server data.</p>
+            </article>
+
+            <article class="status-panel">
+              <div class="panel-title-row">
+                <div>
+                  <p class="eyebrow">Online</p>
+                  <h2>Players</h2>
+                </div>
+                <span class="mini-badge" data-player-total>0 listed</span>
+              </div>
+              <ul class="player-list" data-player-list></ul>
+            </article>
+
+            <article class="status-panel map-panel">
+              <div class="panel-title-row">
+                <div>
+                  <p class="eyebrow">BlueMap</p>
+                  <h2>Linefield City Map</h2>
+                </div>
+                <a class="btn btn-small btn-primary" href="http://144.76.87.106:25643/#world:2332:0:847:2250:0:0:0:0:perspective" target="_blank" rel="noreferrer">Open Map</a>
+              </div>
+              <p class="motd">BlueMap opens directly to the shared city map so players can inspect routes, builds, and landmarks before joining.</p>
+            </article>
+          </div>
+        </section>
+      </section>
+
+      <section class="page" id="jobs" data-page="jobs" aria-labelledby="jobs-title">
+        <section class="subpage-hero">
+          <div class="section-inner">
+            <p class="eyebrow">Confirmed features</p>
+            <h1 id="jobs-title">Jobs</h1>
+            <p>These are the jobs and features listed on the Cybercraft2069 CurseForge page.</p>
+          </div>
+        </section>
+        <section class="band">
+          <div class="section-inner district-grid">
+            <article class="district-card job-card job-replicant">
+              <span>Combat</span>
+              <h2>Replicant Hunting</h2>
+              <p>Replicant hunting is listed as a server job or feature.</p>
+            </article>
+            <article class="district-card job-card job-restaurant">
+              <span>Work</span>
+              <h2>Restaurant And Farming</h2>
+              <p>Restaurant work and plant farming jobs are part of the advertised experience.</p>
+            </article>
+            <article class="district-card job-card job-delivery">
+              <span>Routes</span>
+              <h2>Delivery And Fishing</h2>
+              <p>Delivery and fishing jobs give players city activities beyond standard survival.</p>
+            </article>
+            <article class="district-card job-card job-metro">
+              <span>Mobility</span>
+              <h2>Metro And Cars</h2>
+              <p>Metro systems, flying cars, and Automobility cars are listed transportation features.</p>
+            </article>
+          </div>
+        </section>
+      </section>
+
+      <section class="page" id="media" data-page="media" aria-labelledby="media-title">
+        <section class="subpage-hero">
+          <div class="section-inner">
+            <p class="eyebrow">Videos</p>
+            <h1 id="media-title">Media</h1>
+            <p>Embedded Cybercraft2069 videos supplied by the server team.</p>
+          </div>
+        </section>
+        <section class="band">
+          <div class="section-inner video-grid">
+            <article class="video-panel">
+              <iframe
+                src="https://www.youtube.com/embed/50xNXWvCduQ"
+                title="Cybercraft2069 video 1"
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </article>
+            <article class="video-panel">
+              <iframe
+                src="https://www.youtube.com/embed/3-U8eiNoZKk"
+                title="Cybercraft2069 video 2"
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </article>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <div class="toast" role="status" aria-live="polite" data-toast></div>
+
+    <footer class="site-footer">
+      <div class="section-inner footer-layout">
+        <p>Cybercraft2069 server frontend</p>
+        <p>
+          <a href="https://www.curseforge.com/minecraft/modpacks/cybercraft2069" target="_blank" rel="noreferrer">CurseForge modpack</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
