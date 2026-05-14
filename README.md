@@ -28,10 +28,14 @@ Use a Java server hostname or `hostname:port`. The frontend uses the public mcsr
 - Server: `144.76.87.106:25658`
 - BlueMap: <http://144.76.87.106:25643/#world:2332:0:847:2250:0:0:0:0:perspective>
 - CurseForge: <https://www.curseforge.com/minecraft/modpacks/cybercraft2069>
+- Modrinth: <https://modrinth.com/modpack/cybercraft2069>
+- MCBlox: <https://www.mcblox.online/game.html?id=b5936211-f181-4173-a694-b334e3660418>
+- Trailer: <https://www.youtube.com/watch?v=50xNXWvCduQ>
 
 ## Configure Content
 
 - The Ranks page in `index.html` contains the current Adventurer/Hero/Legend donation reward tiers and policy notice.
+- Home page includes a `Play Cybercraft2069` modal with launcher links (CurseForge, Modrinth, MCBlox) and trailer.
 - Edit the Jobs page in `index.html` if the CurseForge description changes.
 - Keep unconfirmed systems and perks out of the public page until the server team confirms them.
 - Video embeds are in the `Media` page in `index.html`.

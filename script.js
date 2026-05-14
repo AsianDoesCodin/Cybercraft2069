@@ -30,6 +30,9 @@ const dom = {
   statusMotd: document.querySelector("[data-status-motd]"),
   playerList: document.querySelector("[data-player-list]"),
   playerTotal: document.querySelector("[data-player-total]"),
+  platformModal: document.querySelector("[data-platform-modal]"),
+  openPlatformModalButtons: [...document.querySelectorAll("[data-open-platform-modal]")],
+  closePlatformModalButtons: [...document.querySelectorAll("[data-close-platform-modal]")],
   toast: document.querySelector("[data-toast]"),
   cityCanvas: document.querySelector("#cityCanvas"),
 };
@@ -41,6 +44,8 @@ function init() {
 
   bindNavigation();
   bindCopyButtons();
+  bindPlatformModal();
+  dom.refreshStatus?.addEventListener("click", () => refreshServerStatus());
   initCityCanvas();
   routeTo(getRouteFromHash());
   refreshServerStatus();
@@ -75,6 +80,39 @@ function bindCopyButtons() {
   });
 }
 
+function bindPlatformModal() {
+  if (!dom.platformModal) return;
+
+  dom.openPlatformModalButtons.forEach((button) => {
+    button.addEventListener("click", (event) => {
+      event.preventDefault();
+      openPlatformModal();
+    });
+  });
+
+  dom.closePlatformModalButtons.forEach((button) => {
+    button.addEventListener("click", () => closePlatformModal());
+  });
+
+  window.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !dom.platformModal.hidden) {
+      closePlatformModal();
+    }
+  });
+}
+
+function openPlatformModal() {
+  if (!dom.platformModal) return;
+  dom.platformModal.hidden = false;
+  dom.body.classList.add("modal-open");
+}
+
+function closePlatformModal() {
+  if (!dom.platformModal) return;
+  dom.platformModal.hidden = true;
+  dom.body.classList.remove("modal-open");
+}
+
 function getRouteFromHash() {
   const hash = window.location.hash.replace("#", "").trim();
   return hash || "home";
@@ -99,6 +137,7 @@ function routeTo(route) {
       ? "Cybercraft2069 | Cyberpunk Minecraft Server"
       : `${titleCase(nextRoute)} | Cybercraft2069`;
 
+  closePlatformModal();
   window.scrollTo({ top: 0, behavior: "instant" });
 }
 

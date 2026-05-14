@@ -67,9 +67,10 @@
               do gigs, take jobs, upgrade transportation, and work their way toward managing districts.
             </p>
             <div class="hero-actions">
+              <button class="btn btn-play" type="button" data-open-platform-modal>Play Cybercraft2069</button>
               <button class="btn btn-primary" type="button" data-copy-ip>Copy Server IP</button>
               <a class="btn btn-secondary" href="#live" data-route-link>View Live Status</a>
-              <a class="btn btn-secondary" href="https://www.curseforge.com/minecraft/modpacks/cybercraft2069" target="_blank" rel="noreferrer">Install Modpack</a>
+              <a class="btn btn-secondary" href="https://www.youtube.com/watch?v=50xNXWvCduQ" target="_blank" rel="noreferrer">Watch Trailer</a>
               <a class="btn btn-secondary" href="http://144.76.87.106:25643/#world:2332:0:847:2250:0:0:0:0:perspective" target="_blank" rel="noreferrer">Open BlueMap</a>
             </div>
             <dl class="hero-stats" aria-label="Server highlights">
@@ -134,7 +135,7 @@
               <article class="feature-card">
                 <span class="card-code">04</span>
                 <h3>Live Tools</h3>
-                <p>Use this site to copy the server IP, check live status, open BlueMap, and install the CurseForge modpack.</p>
+                <p>Use this site to copy the server IP, check live status, open BlueMap, and launch from CurseForge, Modrinth, or MCBlox.</p>
               </article>
             </div>
           </div>
@@ -146,7 +147,7 @@
               <p class="eyebrow">Deploy client</p>
               <h2 id="join-title">Join the city</h2>
               <p>
-                Install the Cybercraft2069 modpack through CurseForge, then connect to the live server address.
+                Open the play menu, pick CurseForge, Modrinth, or MCBlox, then connect to the live server address.
               </p>
             </div>
             <div class="terminal-panel" role="group" aria-label="Connection details">
@@ -162,7 +163,7 @@
               </div>
               <div class="terminal-actions">
                 <button class="btn btn-secondary full-width" type="button" data-copy-ip>Copy address</button>
-                <a class="btn btn-secondary full-width" href="https://www.curseforge.com/minecraft/modpacks/cybercraft2069" target="_blank" rel="noreferrer">Install modpack</a>
+                <button class="btn btn-secondary full-width" type="button" data-open-platform-modal>Choose platform</button>
               </div>
             </div>
           </div>
@@ -184,7 +185,7 @@
                 <span>Tier 01</span>
                 <h2>Adventurer</h2>
                 <p>
-                  <strong>$4.99/month</strong> · Small convenience and cosmetic upgrades.
+                  <strong>$4.99/month</strong> - Small convenience and cosmetic upgrades.
                 </p>
                 <ul class="rank-perks" aria-label="Adventurer perks">
                   <li><strong>Queue Priority:</strong> join the server queue faster when full.</li>
@@ -192,13 +193,16 @@
                   <li><strong>Kill Effects:</strong> particle effects play on kills.</li>
                   <li><strong>Custom Chat Name.</strong></li>
                 </ul>
+                <div class="rank-actions">
+                  <a class="btn btn-primary full-width" data-rank-buy="adventurer" href="https://www.tebex.io/" target="_blank" rel="noreferrer">Buy Adventurer</a>
+                </div>
               </article>
 
               <article class="district-card rank-card rank-card-ghost">
                 <span>Tier 02</span>
                 <h2>Hero</h2>
                 <p>
-                  <strong>$9.99/month</strong> · More personalization and identity features.
+                  <strong>$9.99/month</strong> - More personalization and identity features.
                 </p>
                 <ul class="rank-perks" aria-label="Hero perks">
                   <li>Includes everything from <strong>Adventurer</strong>.</li>
@@ -207,13 +211,16 @@
                   <li><strong>Custom Nickname.</strong></li>
                   <li><strong>Skin Changer.</strong></li>
                 </ul>
+                <div class="rank-actions">
+                  <a class="btn btn-primary full-width" data-rank-buy="hero" href="https://www.tebex.io/" target="_blank" rel="noreferrer">Buy Hero</a>
+                </div>
               </article>
 
               <article class="district-card rank-card rank-card-overseer">
                 <span>Tier 03</span>
                 <h2>Legend</h2>
                 <p>
-                  <strong>$14.99/month</strong> · Premium cosmetics and social access.
+                  <strong>$14.99/month</strong> - Premium cosmetics and social access.
                 </p>
                 <ul class="rank-perks" aria-label="Legend perks">
                   <li>Includes everything from <strong>Hero</strong>.</li>
@@ -222,6 +229,9 @@
                   <li><strong>Discord to In-Game Chat Access:</strong> abuse or spam may result in a mute.</li>
                   <li><strong>Custom Title:</strong> can be changed once per month and must follow server rules.</li>
                 </ul>
+                <div class="rank-actions">
+                  <a class="btn btn-primary full-width" data-rank-buy="legend" href="https://www.tebex.io/" target="_blank" rel="noreferrer">Buy Legend</a>
+                </div>
               </article>
             </div>
             <div class="rank-policy-grid">
@@ -252,6 +262,24 @@
                 <p>
                   Staff may remove donation reward perks or ranks without refund when they are abused or used in violation of server rules.
                 </p>
+              </article>
+            </div>
+            <div class="payment-suggestion-grid">
+              <article class="district-card payment-card">
+                <h2>Payment Method Suggestions</h2>
+                <p>
+                  Start with a Minecraft-native storefront, then add direct donation options for players who prefer fast checkout.
+                </p>
+                <ul class="rank-policy-list" aria-label="Recommended payment platforms">
+                  <li><strong>Tebex:</strong> best fit for automated Minecraft rank delivery and package management.</li>
+                  <li><strong>CraftingStore:</strong> strong alternative storefront for rank packages and automation.</li>
+                  <li><strong>Ko-fi or Patreon:</strong> optional recurring supporter memberships.</li>
+                  <li><strong>PayPal and Stripe:</strong> direct payment rails if your store supports custom checkout.</li>
+                </ul>
+                <div class="payment-actions">
+                  <a class="btn btn-secondary" href="https://www.tebex.io/" target="_blank" rel="noreferrer">Open Tebex</a>
+                  <a class="btn btn-secondary" href="https://craftingstore.net/" target="_blank" rel="noreferrer">Open CraftingStore</a>
+                </div>
               </article>
             </div>
           </div>
@@ -392,6 +420,50 @@
       </section>
     </main>
 
+    <div class="platform-modal" data-platform-modal hidden>
+      <div class="platform-modal-backdrop" data-close-platform-modal></div>
+      <section class="platform-modal-panel" role="dialog" aria-modal="true" aria-labelledby="platform-modal-title">
+        <button class="platform-modal-close" type="button" aria-label="Close play menu" data-close-platform-modal>&times;</button>
+        <p class="eyebrow">Play Cybercraft2069</p>
+        <h2 id="platform-modal-title">Choose your platform</h2>
+        <p>Launch from your preferred platform, then connect to <strong data-server-host>144.76.87.106:25658</strong>.</p>
+        <div class="platform-option-grid">
+          <a class="platform-option" href="https://www.curseforge.com/minecraft/modpacks/cybercraft2069" target="_blank" rel="noreferrer">
+            <img src="assets/curseforgelogo.jpeg" alt="CurseForge logo" loading="lazy" decoding="async">
+            <div>
+              <strong>CurseForge</strong>
+              <span>Install the full modpack.</span>
+            </div>
+          </a>
+          <a class="platform-option" href="https://modrinth.com/modpack/cybercraft2069" target="_blank" rel="noreferrer">
+            <img src="assets/Modrinth_Logo.png" alt="Modrinth logo" loading="lazy" decoding="async">
+            <div>
+              <strong>Modrinth</strong>
+              <span>Use Modrinth launcher flow.</span>
+            </div>
+          </a>
+          <a class="platform-option" href="https://www.mcblox.online/game.html?id=b5936211-f181-4173-a694-b334e3660418" target="_blank" rel="noreferrer">
+            <img src="assets/mcbloxlogo.png" alt="MCBlox logo" loading="lazy" decoding="async">
+            <div>
+              <strong>MCBlox</strong>
+              <span>One-click game launch.</span>
+            </div>
+          </a>
+          <a class="platform-option" href="https://www.youtube.com/watch?v=50xNXWvCduQ" target="_blank" rel="noreferrer">
+            <img src="assets/site-logo.png" alt="Cybercraft2069 logo" loading="lazy" decoding="async">
+            <div>
+              <strong>Watch Trailer</strong>
+              <span>See the server vibe first.</span>
+            </div>
+          </a>
+        </div>
+        <div class="platform-modal-actions">
+          <button class="btn btn-primary" type="button" data-copy-ip>Copy Server IP</button>
+          <button class="btn btn-secondary" type="button" data-close-platform-modal>Close</button>
+        </div>
+      </section>
+    </div>
+
     <div class="toast" role="status" aria-live="polite" data-toast></div>
 
     <footer class="site-footer">
@@ -400,9 +472,17 @@
         <p>
           <a href="https://www.curseforge.com/minecraft/modpacks/cybercraft2069" target="_blank" rel="noreferrer">CurseForge modpack</a>
         </p>
+        <p>
+          <a href="https://modrinth.com/modpack/cybercraft2069" target="_blank" rel="noreferrer">Modrinth modpack</a>
+        </p>
+        <p>
+          <a href="https://www.mcblox.online/game.html?id=b5936211-f181-4173-a694-b334e3660418" target="_blank" rel="noreferrer">MCBlox listing</a>
+        </p>
       </div>
     </footer>
 
     <script src="script.js"></script>
   </body>
 </html>
+
+
