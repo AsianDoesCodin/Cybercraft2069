@@ -631,6 +631,8 @@ h3 {
 }
 
 .rank-card {
+  display: flex;
+  flex-direction: column;
   min-height: 100%;
   padding: 24px;
   background:
@@ -705,7 +707,13 @@ h3 {
 }
 
 .rank-actions {
-  margin-top: 16px;
+  margin-top: auto;
+  padding-top: 16px;
+}
+
+.rank-actions .btn {
+  min-height: 50px;
+  font-size: 0.95rem;
 }
 
 .rank-policy-card {
