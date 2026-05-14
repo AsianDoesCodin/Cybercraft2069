@@ -7,7 +7,6 @@ const SERVER_CONFIG = {
 const state = {
   currentRoute: "home",
   lastServerData: null,
-  toastTimer: null,
   cityAnimationId: null,
 };
 
@@ -17,8 +16,6 @@ const dom = {
   navToggle: document.querySelector("[data-nav-toggle]"),
   routeLinks: [...document.querySelectorAll("[data-route-link]")],
   pages: [...document.querySelectorAll("[data-page]")],
-  copyButtons: [...document.querySelectorAll("[data-copy-ip]")],
-  serverHosts: [...document.querySelectorAll("[data-server-host]")],
   serverChip: document.querySelector("[data-server-chip]"),
   chipText: document.querySelector("[data-chip-text]"),
   onlineCount: document.querySelector("[data-online-count]"),
@@ -33,17 +30,11 @@ const dom = {
   platformModal: document.querySelector("[data-platform-modal]"),
   openPlatformModalButtons: [...document.querySelectorAll("[data-open-platform-modal]")],
   closePlatformModalButtons: [...document.querySelectorAll("[data-close-platform-modal]")],
-  toast: document.querySelector("[data-toast]"),
   cityCanvas: document.querySelector("#cityCanvas"),
 };
 
 function init() {
-  dom.serverHosts.forEach((node) => {
-    node.textContent = SERVER_CONFIG.host;
-  });
-
   bindNavigation();
-  bindCopyButtons();
   bindPlatformModal();
   dom.refreshStatus?.addEventListener("click", () => refreshServerStatus());
   initCityCanvas();
@@ -64,19 +55,6 @@ function bindNavigation() {
 
   dom.routeLinks.forEach((link) => {
     link.addEventListener("click", () => closeMobileNav());
-  });
-}
-
-function bindCopyButtons() {
-  dom.copyButtons.forEach((button) => {
-    button.addEventListener("click", async () => {
-      try {
-        await navigator.clipboard.writeText(SERVER_CONFIG.host);
-        showToast(`Copied ${SERVER_CONFIG.host}`);
-      } catch {
-        showToast(`Server IP: ${SERVER_CONFIG.host}`);
-      }
-    });
   });
 }
 
@@ -276,17 +254,6 @@ function setServerChip(status, label) {
     dom.serverChip.classList.add(status);
   }
   dom.chipText.textContent = label;
-}
-
-function showToast(message) {
-  if (!dom.toast) return;
-
-  dom.toast.textContent = message;
-  dom.toast.classList.add("visible");
-  window.clearTimeout(state.toastTimer);
-  state.toastTimer = window.setTimeout(() => {
-    dom.toast.classList.remove("visible");
-  }, 2600);
 }
 
 function initCityCanvas() {
