@@ -587,6 +587,13 @@ h3 {
   gap: 14px;
 }
 
+.rank-policy-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 14px;
+}
+
 .rank-card {
   min-height: 100%;
   padding: 24px;
@@ -658,6 +665,30 @@ h3 {
   border-radius: var(--radius-sm);
   background: rgba(0, 0, 0, 0.2);
   color: #d5e2ef;
+  line-height: 1.55;
+}
+
+.rank-policy-card {
+  padding: 24px;
+}
+
+.rank-policy-card h2 {
+  margin-bottom: 14px;
+}
+
+.rank-policy-card p:last-child {
+  margin-bottom: 0;
+}
+
+.rank-policy-list {
+  display: grid;
+  gap: 10px;
+  margin: 0 0 16px;
+  padding-left: 20px;
+  color: #d5e2ef;
+}
+
+.rank-policy-list li {
   line-height: 1.55;
 }
 
@@ -939,7 +970,8 @@ h3 {
   .feature-grid,
   .district-grid,
   .video-grid,
-  .rank-grid {
+  .rank-grid,
+  .rank-policy-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -1045,7 +1077,8 @@ h3 {
   .feature-grid,
   .district-grid,
   .video-grid,
-  .rank-grid {
+  .rank-grid,
+  .rank-policy-grid {
     grid-template-columns: 1fr;
   }
 

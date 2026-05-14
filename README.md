@@ -31,7 +31,7 @@ Use a Java server hostname or `hostname:port`. The frontend uses the public mcsr
 
 ## Configure Content
 
-- The Ranks page is a placeholder until confirmed rank details exist.
+- The Ranks page in `index.html` contains the current Adventurer/Hero/Legend donation reward tiers and policy notice.
 - Edit the Jobs page in `index.html` if the CurseForge description changes.
 - Keep unconfirmed systems and perks out of the public page until the server team confirms them.
 - Video embeds are in the `Media` page in `index.html`.
