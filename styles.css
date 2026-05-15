@@ -585,6 +585,32 @@ h3 {
   gap: 10px;
 }
 
+.btn-install-now {
+  min-height: 54px;
+  border-color: rgba(67, 232, 255, 0.42);
+  background-image:
+    linear-gradient(120deg, rgba(7, 12, 20, 0.84), rgba(14, 22, 36, 0.78)),
+    url("assets/curseforgelogo.jpeg"),
+    url("assets/Modrinth_Logo.png"),
+    url("assets/mcbloxlogo.png");
+  background-repeat: no-repeat;
+  background-size: cover, 58px 58px, 58px 58px, 58px 58px;
+  background-position: center, 16% center, 50% center, 84% center;
+  color: #f5fbff;
+  font-size: 1.06rem;
+  font-weight: 900;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+}
+
+.btn-install-now:hover {
+  border-color: rgba(67, 232, 255, 0.72);
+  background-image:
+    linear-gradient(120deg, rgba(8, 14, 24, 0.92), rgba(16, 26, 44, 0.9)),
+    url("assets/curseforgelogo.jpeg"),
+    url("assets/Modrinth_Logo.png"),
+    url("assets/mcbloxlogo.png");
+}
+
 .subpage-hero {
   padding: clamp(74px, 12vw, 128px) 0 42px;
   border-bottom: 1px solid rgba(149, 247, 255, 0.14);
