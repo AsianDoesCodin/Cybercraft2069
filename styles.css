@@ -303,6 +303,13 @@ code {
   align-items: center;
   overflow: hidden;
   border-bottom: 1px solid rgba(149, 247, 255, 0.16);
+  background:
+    linear-gradient(90deg, rgba(8, 10, 15, 0.94) 0%, rgba(8, 10, 15, 0.84) 34%, rgba(8, 10, 15, 0.48) 58%, rgba(8, 10, 15, 0.18) 100%),
+    linear-gradient(180deg, rgba(8, 10, 15, 0.14) 0%, rgba(8, 10, 15, 0.72) 100%),
+    url("assets/hero-city-0504fsd.png");
+  background-position: center, center, 68% 34%;
+  background-repeat: no-repeat;
+  background-size: auto, auto, cover;
 }
 
 #cityCanvas {
@@ -310,6 +317,7 @@ code {
   inset: 0;
   width: 100%;
   height: 100%;
+  display: none;
 }
 
 .hero::after {
@@ -317,8 +325,9 @@ code {
   inset: 0;
   content: "";
   background:
-    linear-gradient(90deg, rgba(8, 10, 15, 0.92) 0%, rgba(8, 10, 15, 0.72) 42%, rgba(8, 10, 15, 0.14) 100%),
-    linear-gradient(180deg, rgba(8, 10, 15, 0.08) 0%, rgba(8, 10, 15, 0.86) 92%);
+    radial-gradient(circle at 78% 24%, rgba(67, 232, 255, 0.14), transparent 26%),
+    radial-gradient(circle at 84% 72%, rgba(255, 63, 209, 0.14), transparent 28%);
+  pointer-events: none;
 }
 
 .hero-grid {
@@ -1383,6 +1392,7 @@ h3 {
 
   .hero {
     min-height: calc(92svh - var(--header-h));
+    background-position: center, center, 62% 38%;
   }
 
   .hero-content {
