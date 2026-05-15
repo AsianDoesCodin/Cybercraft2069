@@ -11,7 +11,7 @@
     <link rel="icon" type="image/jpeg" href="assets/newlogo.jpg">
     <link rel="apple-touch-icon" href="assets/newlogo.jpg">
     <link rel="preconnect" href="https://api.mcsrvstat.us">
-    <link rel="stylesheet" href="styles.css?v=20260515-5">
+    <link rel="stylesheet" href="styles.css?v=20260515-6">
   </head>
   <body>
     <div class="scanline" aria-hidden="true"></div>
@@ -190,25 +190,15 @@
                   </span>
                   Donation Ranks
                 </a>
-                <a class="store-category" href="#donate" data-route-link>
+                <a class="store-category" href="#store-cosmetics">
                   <span class="store-category-icon" aria-hidden="true">
                     <svg viewBox="0 0 24 24" role="img">
-                      <path d="M7 5h10a4 4 0 0 1 0 8H7V5Z"></path>
-                      <path d="M7 13h6a4 4 0 0 1 0 8H7v-8Z"></path>
-                      <path d="M7 5v16"></path>
+                      <path d="M12 3l2.5 5 5.5.8-4 3.9.9 5.5L12 15.6 7.1 18.2l.9-5.5-4-3.9 5.5-.8L12 3Z"></path>
+                      <path d="M12 8v4"></path>
+                      <path d="M10 10h4"></path>
                     </svg>
                   </span>
-                  Ko-fi Verification
-                </a>
-                <a class="store-category" href="https://discord.gg/BhTD6c4d2s" target="_blank" rel="noreferrer">
-                  <span class="store-category-icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" role="img">
-                      <path d="M5 5h14v10H8l-3 3V5Z"></path>
-                      <path d="M9 9h6"></path>
-                      <path d="M9 12h4"></path>
-                    </svg>
-                  </span>
-                  Discord Ticket
+                  Cosmetics
                 </a>
               </article>
             </aside>
@@ -237,7 +227,7 @@
                       <li>Kill Effects</li>
                       <li>Custom Chat Name</li>
                     </ul>
-                    <a class="btn btn-primary full-width" data-route-link data-rank-donate="adventurer" href="#donate">Donate $4.99/mo</a>
+                    <button class="btn btn-primary full-width" type="button" data-open-donate-modal data-rank-donate="Adventurer">Donate $4.99/mo</button>
                   </div>
                 </article>
 
@@ -255,7 +245,7 @@
                       <li>Custom Nickname</li>
                       <li>Skin Changer</li>
                     </ul>
-                    <a class="btn btn-primary full-width" data-route-link data-rank-donate="hero" href="#donate">Donate $9.99/mo</a>
+                    <button class="btn btn-primary full-width" type="button" data-open-donate-modal data-rank-donate="Hero">Donate $9.99/mo</button>
                   </div>
                 </article>
 
@@ -273,8 +263,51 @@
                       <li>Discord to In-Game Chat Access</li>
                       <li>Monthly Custom Title</li>
                     </ul>
-                    <a class="btn btn-primary full-width" data-route-link data-rank-donate="legend" href="#donate">Donate $14.99/mo</a>
+                    <button class="btn btn-primary full-width" type="button" data-open-donate-modal data-rank-donate="Legend">Donate $14.99/mo</button>
                   </div>
+                </article>
+              </div>
+
+              <article class="store-intro-card cosmetics-intro" id="store-cosmetics">
+                <p class="eyebrow">Cosmetic rewards</p>
+                <h2>Cosmetics</h2>
+                <p>
+                  Cosmetic access is a supporter thank-you. Kill effects, custom chat identity, nicknames, titles, and rotating premium cosmetics stay rule-bound.
+                </p>
+              </article>
+
+              <div class="cosmetic-grid">
+                <article class="cosmetic-card">
+                  <span class="store-category-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" role="img">
+                      <path d="M12 3v18"></path>
+                      <path d="M5 8h14"></path>
+                      <path d="M7 16h10"></path>
+                    </svg>
+                  </span>
+                  <h3>Kill Effects</h3>
+                  <p>Particle effects on kills, plus premium rotating effects for Legend supporters.</p>
+                </article>
+                <article class="cosmetic-card">
+                  <span class="store-category-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" role="img">
+                      <path d="M4 5h16v10H8l-4 4V5Z"></path>
+                      <path d="M8 9h8"></path>
+                      <path d="M8 12h5"></path>
+                    </svg>
+                  </span>
+                  <h3>Chat Identity</h3>
+                  <p>Custom chat name, color, nickname, and title perks by rank.</p>
+                </article>
+                <article class="cosmetic-card">
+                  <span class="store-category-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" role="img">
+                      <path d="M12 4a4 4 0 0 1 4 4v2h2v10H6V10h2V8a4 4 0 0 1 4-4Z"></path>
+                      <path d="M9 10h6"></path>
+                    </svg>
+                  </span>
+                  <h3>Skin Changer</h3>
+                  <p>Hero and Legend supporters get extra personalization through skin changer access.</p>
                 </article>
               </div>
             </div>
@@ -311,38 +344,6 @@
                 </p>
               </article>
             </div>
-          </div>
-        </section>
-      </section>
-
-      <section class="page" id="donate" data-page="donate" aria-labelledby="donate-title">
-        <section class="subpage-hero">
-          <div class="section-inner">
-            <p class="eyebrow">Support the server</p>
-            <h1 id="donate-title">Donate</h1>
-            <p>Donation reward ranks are granted after donation verification through Discord tickets.</p>
-          </div>
-        </section>
-        <section class="band">
-          <div class="section-inner rank-policy-grid">
-            <article class="district-card payment-card">
-              <h2>Step 1: Donate On Ko-fi</h2>
-              <p>
-                Donate at our official page and keep your receipt or transaction screenshot for verification.
-              </p>
-              <div class="payment-actions">
-                <a class="btn btn-primary" href="https://ko-fi.com/cybercraft2069" target="_blank" rel="noreferrer">Donate on Ko-fi</a>
-              </div>
-            </article>
-            <article class="district-card payment-card">
-              <h2>Step 2: Open A Discord Ticket</h2>
-              <p>
-                Join our Discord and open a support ticket so staff can verify your donation and assign your reward rank.
-              </p>
-              <div class="payment-actions">
-                <a class="btn btn-discord" href="https://discord.gg/BhTD6c4d2s" target="_blank" rel="noreferrer">Join Discord and Open Ticket</a>
-              </div>
-            </article>
           </div>
         </section>
       </section>
@@ -450,6 +451,45 @@
       </section>
     </div>
 
+    <div class="platform-modal" data-donate-modal hidden>
+      <div class="platform-modal-backdrop" data-close-donate-modal></div>
+      <section class="platform-modal-panel donate-modal-panel" role="dialog" aria-modal="true" aria-labelledby="donate-modal-title">
+        <button class="platform-modal-close" type="button" aria-label="Close donation instructions" data-close-donate-modal>&times;</button>
+        <p class="eyebrow">Donation verification</p>
+        <h2 id="donate-modal-title">Donate, then open a ticket</h2>
+        <p data-donate-modal-copy>Use Ko-fi first, then open a Discord ticket so staff can verify your donation and assign your reward rank.</p>
+        <div class="donate-step-grid">
+          <article class="donate-step">
+            <span class="store-category-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="img">
+                <path d="M7 5h10a4 4 0 0 1 0 8H7V5Z"></path>
+                <path d="M7 13h6a4 4 0 0 1 0 8H7v-8Z"></path>
+                <path d="M7 5v16"></path>
+              </svg>
+            </span>
+            <h3>1. Donate on Ko-fi</h3>
+            <p>Keep your receipt or transaction screenshot for staff verification.</p>
+            <a class="btn btn-primary full-width" href="https://ko-fi.com/cybercraft2069" target="_blank" rel="noreferrer">Open Ko-fi</a>
+          </article>
+          <article class="donate-step">
+            <span class="store-category-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="img">
+                <path d="M5 5h14v10H8l-3 3V5Z"></path>
+                <path d="M9 9h6"></path>
+                <path d="M9 12h4"></path>
+              </svg>
+            </span>
+            <h3>2. Open Discord ticket</h3>
+            <p>Tell staff which reward rank you donated for after joining Discord.</p>
+            <a class="btn btn-discord full-width" href="https://discord.gg/BhTD6c4d2s" target="_blank" rel="noreferrer">Open Discord</a>
+          </article>
+        </div>
+        <div class="platform-modal-actions">
+          <button class="btn btn-secondary" type="button" data-close-donate-modal>Close</button>
+        </div>
+      </section>
+    </div>
+
     <footer class="site-footer">
       <div class="section-inner footer-layout">
         <p>Cybercraft2069 server frontend</p>
@@ -465,7 +505,7 @@
       </div>
     </footer>
 
-    <script src="script.js?v=20260515-5"></script>
+    <script src="script.js?v=20260515-6"></script>
   </body>
 </html>
 

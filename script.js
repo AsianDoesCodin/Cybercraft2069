@@ -30,12 +30,17 @@ const dom = {
   platformModal: document.querySelector("[data-platform-modal]"),
   openPlatformModalButtons: [...document.querySelectorAll("[data-open-platform-modal]")],
   closePlatformModalButtons: [...document.querySelectorAll("[data-close-platform-modal]")],
+  donateModal: document.querySelector("[data-donate-modal]"),
+  donateModalCopy: document.querySelector("[data-donate-modal-copy]"),
+  openDonateModalButtons: [...document.querySelectorAll("[data-open-donate-modal]")],
+  closeDonateModalButtons: [...document.querySelectorAll("[data-close-donate-modal]")],
   cityCanvas: document.querySelector("#cityCanvas"),
 };
 
 function init() {
   bindNavigation();
   bindPlatformModal();
+  bindDonateModal();
   dom.refreshStatus?.addEventListener("click", () => refreshServerStatus());
   initCityCanvas();
   routeTo(getRouteFromHash());
@@ -79,6 +84,26 @@ function bindPlatformModal() {
   });
 }
 
+function bindDonateModal() {
+  if (!dom.donateModal) return;
+
+  dom.openDonateModalButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      openDonateModal(button.dataset.rankDonate);
+    });
+  });
+
+  dom.closeDonateModalButtons.forEach((button) => {
+    button.addEventListener("click", () => closeDonateModal());
+  });
+
+  window.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !dom.donateModal.hidden) {
+      closeDonateModal();
+    }
+  });
+}
+
 function openPlatformModal() {
   if (!dom.platformModal) return;
   dom.platformModal.hidden = false;
@@ -88,6 +113,21 @@ function openPlatformModal() {
 function closePlatformModal() {
   if (!dom.platformModal) return;
   dom.platformModal.hidden = true;
+  dom.body.classList.remove("modal-open");
+}
+
+function openDonateModal(rankName) {
+  if (!dom.donateModal) return;
+  if (dom.donateModalCopy && rankName) {
+    dom.donateModalCopy.textContent = `Donate for ${rankName} on Ko-fi, then open a Discord ticket so staff can verify your donation and assign your reward rank.`;
+  }
+  dom.donateModal.hidden = false;
+  dom.body.classList.add("modal-open");
+}
+
+function closeDonateModal() {
+  if (!dom.donateModal) return;
+  dom.donateModal.hidden = true;
   dom.body.classList.remove("modal-open");
 }
 
@@ -116,6 +156,7 @@ function routeTo(route) {
       : `${titleCase(nextRoute)} | Cybercraft2069`;
 
   closePlatformModal();
+  closeDonateModal();
   window.scrollTo({ top: 0, behavior: "instant" });
 }
 
