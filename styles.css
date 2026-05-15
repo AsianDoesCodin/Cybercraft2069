@@ -829,14 +829,12 @@ h3 {
   margin-top: 8px;
 }
 
-.cosmetic-grid,
 .donate-step-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
 }
 
-.cosmetic-card,
 .donate-step {
   border: 1px solid rgba(149, 247, 255, 0.15);
   background:
@@ -845,21 +843,47 @@ h3 {
   padding: 20px;
 }
 
-.cosmetic-card h3,
 .donate-step h3 {
   margin: 14px 0 8px;
   font-size: 1.15rem;
 }
 
-.cosmetic-card p,
 .donate-step p {
   color: var(--muted);
   line-height: 1.58;
 }
 
-.donate-step-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  margin-top: 18px;
+.empty-store-panel {
+  display: grid;
+  min-height: 250px;
+  place-items: center;
+  border: 1px solid rgba(149, 247, 255, 0.15);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.015)),
+    rgba(14, 17, 23, 0.88);
+  padding: 28px;
+  text-align: center;
+}
+
+.empty-store-panel .store-category-icon {
+  width: 54px;
+  height: 54px;
+  margin: 0 auto 16px;
+}
+
+.empty-store-panel .store-category-icon svg {
+  width: 30px;
+  height: 30px;
+}
+
+.empty-store-panel h3 {
+  margin: 0 0 8px;
+  font-size: 1.55rem;
+}
+
+.empty-store-panel p {
+  margin-bottom: 0;
+  color: var(--muted);
 }
 
 .donate-modal-panel {
@@ -1307,7 +1331,6 @@ h3 {
   .video-grid,
   .rank-grid,
   .rank-policy-grid,
-  .cosmetic-grid,
   .platform-option-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1428,7 +1451,6 @@ h3 {
   .video-grid,
   .rank-grid,
   .rank-policy-grid,
-  .cosmetic-grid,
   .donate-step-grid,
   .platform-option-grid {
     grid-template-columns: 1fr;
