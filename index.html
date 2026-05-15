@@ -11,7 +11,7 @@
     <link rel="icon" type="image/jpeg" href="assets/newlogo.jpg">
     <link rel="apple-touch-icon" href="assets/newlogo.jpg">
     <link rel="preconnect" href="https://api.mcsrvstat.us">
-    <link rel="stylesheet" href="styles.css?v=20260515-3">
+    <link rel="stylesheet" href="styles.css?v=20260515-4">
   </head>
   <body>
     <div class="scanline" aria-hidden="true"></div>
@@ -161,69 +161,108 @@
       </section>
 
       <section class="page" id="ranks" data-page="ranks" aria-labelledby="ranks-title">
-        <section class="subpage-hero">
+        <section class="subpage-hero store-hero">
           <div class="section-inner">
             <p class="eyebrow">Donation rewards</p>
-            <h1 id="ranks-title">Ranks</h1>
-            <p>Three donation reward ranks with convenience and cosmetic perks. Higher ranks include all lower-rank benefits.</p>
+            <h1 id="ranks-title">Support Store</h1>
+            <p>Choose a donation reward rank, donate on Ko-fi, then open a Discord ticket so staff can verify and assign it.</p>
           </div>
         </section>
-        <section class="band">
-          <div class="section-inner">
-            <div class="rank-grid">
-              <article class="district-card rank-card rank-card-runner">
-                <span>Tier 01</span>
-                <h2>Adventurer</h2>
-                <p>
-                  <strong>$4.99/month</strong> - Small convenience and cosmetic upgrades.
-                </p>
-                <ul class="rank-perks" aria-label="Adventurer perks">
-                  <li><strong>Queue Priority:</strong> join the server queue faster when full.</li>
-                  <li><strong>+2 Auction Stalls:</strong> 5 to 7 total stalls.</li>
-                  <li><strong>Kill Effects:</strong> particle effects play on kills.</li>
-                  <li><strong>Custom Chat Name.</strong></li>
-                </ul>
-                <div class="rank-actions">
-                  <a class="btn btn-primary full-width" data-route-link data-rank-buy="adventurer" href="#donate">Donate - Adventurer ($4.99/mo)</a>
+        <section class="band store-band">
+          <div class="section-inner store-layout">
+            <aside class="store-sidebar" aria-label="Store navigation">
+              <article class="store-account-card">
+                <img src="assets/newlogo.jpg" alt="" loading="lazy" decoding="async">
+                <div>
+                  <strong>Guest Supporter</strong>
+                  <span>Donate, then verify through Discord.</span>
                 </div>
+              </article>
+              <article class="store-category-card">
+                <h2>Categories</h2>
+                <a class="store-category active" href="#ranks" data-route-link>
+                  <span>01</span>
+                  Donation Ranks
+                </a>
+                <a class="store-category" href="#donate" data-route-link>
+                  <span>02</span>
+                  Ko-fi Verification
+                </a>
+                <a class="store-category" href="https://discord.gg/BhTD6c4d2s" target="_blank" rel="noreferrer">
+                  <span>03</span>
+                  Discord Ticket
+                </a>
+              </article>
+            </aside>
+
+            <div class="store-main">
+              <article class="store-intro-card">
+                <p class="eyebrow">Cybercraft2069 rewards</p>
+                <h2>Donation Reward Ranks</h2>
+                <p>
+                  These are appreciation rewards for supporting hosting, development, maintenance, and future community improvements.
+                  Higher ranks include all lower-rank perks.
+                </p>
               </article>
 
-              <article class="district-card rank-card rank-card-ghost">
-                <span>Tier 02</span>
-                <h2>Hero</h2>
-                <p>
-                  <strong>$9.99/month</strong> - More personalization and identity features.
-                </p>
-                <ul class="rank-perks" aria-label="Hero perks">
-                  <li>Includes everything from <strong>Adventurer</strong>.</li>
-                  <li><strong>+2 More Auction Stalls:</strong> 7 to 9 total stalls.</li>
-                  <li><strong>Custom Chat Color.</strong></li>
-                  <li><strong>Custom Nickname.</strong></li>
-                  <li><strong>Skin Changer.</strong></li>
-                </ul>
-                <div class="rank-actions">
-                  <a class="btn btn-primary full-width" data-route-link data-rank-buy="hero" href="#donate">Donate - Hero ($9.99/mo)</a>
-                </div>
-              </article>
+              <div class="rank-grid store-product-grid">
+                <article class="store-product-card rank-card-runner">
+                  <div class="store-product-media" aria-hidden="true"></div>
+                  <div class="store-product-body">
+                    <span class="store-tier">Tier 01</span>
+                    <h2>Adventurer</h2>
+                    <p>Small convenience and cosmetic upgrades.</p>
+                    <strong class="store-price">$4.99/month</strong>
+                    <ul class="rank-perks" aria-label="Adventurer perks">
+                      <li>Queue Priority</li>
+                      <li>+2 Auction Stalls: 5 to 7 total</li>
+                      <li>Kill Effects</li>
+                      <li>Custom Chat Name</li>
+                    </ul>
+                    <a class="btn btn-primary full-width" data-route-link data-rank-donate="adventurer" href="#donate">Donate $4.99/mo</a>
+                  </div>
+                </article>
 
-              <article class="district-card rank-card rank-card-overseer">
-                <span>Tier 03</span>
-                <h2>Legend</h2>
-                <p>
-                  <strong>$14.99/month</strong> - Premium cosmetics and social access.
-                </p>
-                <ul class="rank-perks" aria-label="Legend perks">
-                  <li>Includes everything from <strong>Hero</strong>.</li>
-                  <li><strong>+2 More Auction Stalls:</strong> 9 to 11 total stalls.</li>
-                  <li><strong>Rotating Premium Cosmetics Access:</strong> selected premium cosmetics and kill effects rotate weekly.</li>
-                  <li><strong>Discord to In-Game Chat Access:</strong> abuse or spam may result in a mute.</li>
-                  <li><strong>Custom Title:</strong> can be changed once per month and must follow server rules.</li>
-                </ul>
-                <div class="rank-actions">
-                  <a class="btn btn-primary full-width" data-route-link data-rank-buy="legend" href="#donate">Donate - Legend ($14.99/mo)</a>
-                </div>
-              </article>
+                <article class="store-product-card rank-card-ghost">
+                  <div class="store-product-media" aria-hidden="true"></div>
+                  <div class="store-product-body">
+                    <span class="store-tier">Tier 02</span>
+                    <h2>Hero</h2>
+                    <p>More personalization and identity features.</p>
+                    <strong class="store-price">$9.99/month</strong>
+                    <ul class="rank-perks" aria-label="Hero perks">
+                      <li>Everything from Adventurer</li>
+                      <li>+2 More Auction Stalls: 7 to 9 total</li>
+                      <li>Custom Chat Color</li>
+                      <li>Custom Nickname</li>
+                      <li>Skin Changer</li>
+                    </ul>
+                    <a class="btn btn-primary full-width" data-route-link data-rank-donate="hero" href="#donate">Donate $9.99/mo</a>
+                  </div>
+                </article>
+
+                <article class="store-product-card rank-card-overseer">
+                  <div class="store-product-media" aria-hidden="true"></div>
+                  <div class="store-product-body">
+                    <span class="store-tier">Tier 03</span>
+                    <h2>Legend</h2>
+                    <p>Premium cosmetic access and social perks.</p>
+                    <strong class="store-price">$14.99/month</strong>
+                    <ul class="rank-perks" aria-label="Legend perks">
+                      <li>Everything from Hero</li>
+                      <li>+2 More Auction Stalls: 9 to 11 total</li>
+                      <li>Weekly rotating premium cosmetics</li>
+                      <li>Discord to In-Game Chat Access</li>
+                      <li>Monthly Custom Title</li>
+                    </ul>
+                    <a class="btn btn-primary full-width" data-route-link data-rank-donate="legend" href="#donate">Donate $14.99/mo</a>
+                  </div>
+                </article>
+              </div>
             </div>
+          </div>
+
+          <div class="section-inner">
             <div class="rank-policy-grid">
               <article class="district-card rank-policy-card">
                 <h2>Donation Notice</h2>
@@ -408,7 +447,7 @@
       </div>
     </footer>
 
-    <script src="script.js?v=20260515-3"></script>
+    <script src="script.js?v=20260515-4"></script>
   </body>
 </html>
 
