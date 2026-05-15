@@ -632,7 +632,13 @@ h3 {
   min-height: 54px;
   margin: 0 -14px;
   padding: 10px 16px;
+  border: 0;
+  width: calc(100% + 28px);
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
   color: #dbe8f5;
+  background: transparent;
   transition: background 160ms ease, color 160ms ease;
 }
 
@@ -666,6 +672,15 @@ h3 {
 .store-main {
   display: grid;
   gap: 14px;
+}
+
+.store-tab-panel {
+  display: grid;
+  gap: 14px;
+}
+
+.store-tab-panel[hidden] {
+  display: none !important;
 }
 
 .store-intro-card {

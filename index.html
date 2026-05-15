@@ -11,7 +11,7 @@
     <link rel="icon" type="image/jpeg" href="assets/newlogo.jpg">
     <link rel="apple-touch-icon" href="assets/newlogo.jpg">
     <link rel="preconnect" href="https://api.mcsrvstat.us">
-    <link rel="stylesheet" href="styles.css?v=20260515-6">
+    <link rel="stylesheet" href="styles.css?v=20260515-7">
   </head>
   <body>
     <div class="scanline" aria-hidden="true"></div>
@@ -180,7 +180,7 @@
               </article>
               <article class="store-category-card">
                 <h2>Categories</h2>
-                <a class="store-category active" href="#ranks" data-route-link>
+                <button class="store-category active" type="button" data-store-tab="ranks" aria-pressed="true">
                   <span class="store-category-icon" aria-hidden="true">
                     <svg viewBox="0 0 24 24" role="img">
                       <path d="M7 4h10l3 5-8 11L4 9l3-5Z"></path>
@@ -189,8 +189,8 @@
                     </svg>
                   </span>
                   Donation Ranks
-                </a>
-                <a class="store-category" href="#store-cosmetics">
+                </button>
+                <button class="store-category" type="button" data-store-tab="cosmetics" aria-pressed="false">
                   <span class="store-category-icon" aria-hidden="true">
                     <svg viewBox="0 0 24 24" role="img">
                       <path d="M12 3l2.5 5 5.5.8-4 3.9.9 5.5L12 15.6 7.1 18.2l.9-5.5-4-3.9 5.5-.8L12 3Z"></path>
@@ -199,116 +199,120 @@
                     </svg>
                   </span>
                   Cosmetics
-                </a>
+                </button>
               </article>
             </aside>
 
             <div class="store-main">
-              <article class="store-intro-card">
-                <p class="eyebrow">Cybercraft2069 rewards</p>
-                <h2>Donation Reward Ranks</h2>
-                <p>
-                  These are appreciation rewards for supporting hosting, development, maintenance, and future community improvements.
-                  Higher ranks include all lower-rank perks.
-                </p>
-              </article>
-
-              <div class="rank-grid store-product-grid">
-                <article class="store-product-card rank-card-runner">
-                  <div class="store-product-media" aria-hidden="true"></div>
-                  <div class="store-product-body">
-                    <span class="store-tier">Tier 01</span>
-                    <h2>Adventurer</h2>
-                    <p>Small convenience and cosmetic upgrades.</p>
-                    <strong class="store-price">$4.99/month</strong>
-                    <ul class="rank-perks" aria-label="Adventurer perks">
-                      <li>Queue Priority</li>
-                      <li>+2 Auction Stalls: 5 to 7 total</li>
-                      <li>Kill Effects</li>
-                      <li>Custom Chat Name</li>
-                    </ul>
-                    <button class="btn btn-primary full-width" type="button" data-open-donate-modal data-rank-donate="Adventurer">Donate $4.99/mo</button>
-                  </div>
+              <div class="store-tab-panel active" data-store-panel="ranks">
+                <article class="store-intro-card">
+                  <p class="eyebrow">Cybercraft2069 rewards</p>
+                  <h2>Donation Reward Ranks</h2>
+                  <p>
+                    These are appreciation rewards for supporting hosting, development, maintenance, and future community improvements.
+                    Higher ranks include all lower-rank perks.
+                  </p>
                 </article>
 
-                <article class="store-product-card rank-card-ghost">
-                  <div class="store-product-media" aria-hidden="true"></div>
-                  <div class="store-product-body">
-                    <span class="store-tier">Tier 02</span>
-                    <h2>Hero</h2>
-                    <p>More personalization and identity features.</p>
-                    <strong class="store-price">$9.99/month</strong>
-                    <ul class="rank-perks" aria-label="Hero perks">
-                      <li>Everything from Adventurer</li>
-                      <li>+2 More Auction Stalls: 7 to 9 total</li>
-                      <li>Custom Chat Color</li>
-                      <li>Custom Nickname</li>
-                      <li>Skin Changer</li>
-                    </ul>
-                    <button class="btn btn-primary full-width" type="button" data-open-donate-modal data-rank-donate="Hero">Donate $9.99/mo</button>
-                  </div>
-                </article>
+                <div class="rank-grid store-product-grid">
+                  <article class="store-product-card rank-card-runner">
+                    <div class="store-product-media" aria-hidden="true"></div>
+                    <div class="store-product-body">
+                      <span class="store-tier">Tier 01</span>
+                      <h2>Adventurer</h2>
+                      <p>Small convenience and cosmetic upgrades.</p>
+                      <strong class="store-price">$4.99/month</strong>
+                      <ul class="rank-perks" aria-label="Adventurer perks">
+                        <li>Queue Priority</li>
+                        <li>+2 Auction Stalls: 5 to 7 total</li>
+                        <li>Kill Effects</li>
+                        <li>Custom Chat Name</li>
+                      </ul>
+                      <button class="btn btn-primary full-width" type="button" data-open-donate-modal data-rank-donate="Adventurer">Donate $4.99/mo</button>
+                    </div>
+                  </article>
 
-                <article class="store-product-card rank-card-overseer">
-                  <div class="store-product-media" aria-hidden="true"></div>
-                  <div class="store-product-body">
-                    <span class="store-tier">Tier 03</span>
-                    <h2>Legend</h2>
-                    <p>Premium cosmetic access and social perks.</p>
-                    <strong class="store-price">$14.99/month</strong>
-                    <ul class="rank-perks" aria-label="Legend perks">
-                      <li>Everything from Hero</li>
-                      <li>+2 More Auction Stalls: 9 to 11 total</li>
-                      <li>Weekly rotating premium cosmetics</li>
-                      <li>Discord to In-Game Chat Access</li>
-                      <li>Monthly Custom Title</li>
-                    </ul>
-                    <button class="btn btn-primary full-width" type="button" data-open-donate-modal data-rank-donate="Legend">Donate $14.99/mo</button>
-                  </div>
-                </article>
+                  <article class="store-product-card rank-card-ghost">
+                    <div class="store-product-media" aria-hidden="true"></div>
+                    <div class="store-product-body">
+                      <span class="store-tier">Tier 02</span>
+                      <h2>Hero</h2>
+                      <p>More personalization and identity features.</p>
+                      <strong class="store-price">$9.99/month</strong>
+                      <ul class="rank-perks" aria-label="Hero perks">
+                        <li>Everything from Adventurer</li>
+                        <li>+2 More Auction Stalls: 7 to 9 total</li>
+                        <li>Custom Chat Color</li>
+                        <li>Custom Nickname</li>
+                        <li>Skin Changer</li>
+                      </ul>
+                      <button class="btn btn-primary full-width" type="button" data-open-donate-modal data-rank-donate="Hero">Donate $9.99/mo</button>
+                    </div>
+                  </article>
+
+                  <article class="store-product-card rank-card-overseer">
+                    <div class="store-product-media" aria-hidden="true"></div>
+                    <div class="store-product-body">
+                      <span class="store-tier">Tier 03</span>
+                      <h2>Legend</h2>
+                      <p>Premium cosmetic access and social perks.</p>
+                      <strong class="store-price">$14.99/month</strong>
+                      <ul class="rank-perks" aria-label="Legend perks">
+                        <li>Everything from Hero</li>
+                        <li>+2 More Auction Stalls: 9 to 11 total</li>
+                        <li>Weekly rotating premium cosmetics</li>
+                        <li>Discord to In-Game Chat Access</li>
+                        <li>Monthly Custom Title</li>
+                      </ul>
+                      <button class="btn btn-primary full-width" type="button" data-open-donate-modal data-rank-donate="Legend">Donate $14.99/mo</button>
+                    </div>
+                  </article>
+                </div>
               </div>
 
-              <article class="store-intro-card cosmetics-intro" id="store-cosmetics">
-                <p class="eyebrow">Cosmetic rewards</p>
-                <h2>Cosmetics</h2>
-                <p>
-                  Cosmetic access is a supporter thank-you. Kill effects, custom chat identity, nicknames, titles, and rotating premium cosmetics stay rule-bound.
-                </p>
-              </article>
+              <div class="store-tab-panel" data-store-panel="cosmetics" hidden>
+                <article class="store-intro-card cosmetics-intro">
+                  <p class="eyebrow">Cosmetic rewards</p>
+                  <h2>Cosmetics</h2>
+                  <p>
+                    Cosmetic access is a supporter thank-you. Kill effects, custom chat identity, nicknames, titles, and rotating premium cosmetics stay rule-bound.
+                  </p>
+                </article>
 
-              <div class="cosmetic-grid">
-                <article class="cosmetic-card">
-                  <span class="store-category-icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" role="img">
-                      <path d="M12 3v18"></path>
-                      <path d="M5 8h14"></path>
-                      <path d="M7 16h10"></path>
-                    </svg>
-                  </span>
-                  <h3>Kill Effects</h3>
-                  <p>Particle effects on kills, plus premium rotating effects for Legend supporters.</p>
-                </article>
-                <article class="cosmetic-card">
-                  <span class="store-category-icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" role="img">
-                      <path d="M4 5h16v10H8l-4 4V5Z"></path>
-                      <path d="M8 9h8"></path>
-                      <path d="M8 12h5"></path>
-                    </svg>
-                  </span>
-                  <h3>Chat Identity</h3>
-                  <p>Custom chat name, color, nickname, and title perks by rank.</p>
-                </article>
-                <article class="cosmetic-card">
-                  <span class="store-category-icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" role="img">
-                      <path d="M12 4a4 4 0 0 1 4 4v2h2v10H6V10h2V8a4 4 0 0 1 4-4Z"></path>
-                      <path d="M9 10h6"></path>
-                    </svg>
-                  </span>
-                  <h3>Skin Changer</h3>
-                  <p>Hero and Legend supporters get extra personalization through skin changer access.</p>
-                </article>
+                <div class="cosmetic-grid">
+                  <article class="cosmetic-card">
+                    <span class="store-category-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" role="img">
+                        <path d="M12 3v18"></path>
+                        <path d="M5 8h14"></path>
+                        <path d="M7 16h10"></path>
+                      </svg>
+                    </span>
+                    <h3>Kill Effects</h3>
+                    <p>Particle effects on kills, plus premium rotating effects for Legend supporters.</p>
+                  </article>
+                  <article class="cosmetic-card">
+                    <span class="store-category-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" role="img">
+                        <path d="M4 5h16v10H8l-4 4V5Z"></path>
+                        <path d="M8 9h8"></path>
+                        <path d="M8 12h5"></path>
+                      </svg>
+                    </span>
+                    <h3>Chat Identity</h3>
+                    <p>Custom chat name, color, nickname, and title perks by rank.</p>
+                  </article>
+                  <article class="cosmetic-card">
+                    <span class="store-category-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" role="img">
+                        <path d="M12 4a4 4 0 0 1 4 4v2h2v10H6V10h2V8a4 4 0 0 1 4-4Z"></path>
+                        <path d="M9 10h6"></path>
+                      </svg>
+                    </span>
+                    <h3>Skin Changer</h3>
+                    <p>Hero and Legend supporters get extra personalization through skin changer access.</p>
+                  </article>
+                </div>
               </div>
             </div>
           </div>
@@ -505,7 +509,7 @@
       </div>
     </footer>
 
-    <script src="script.js?v=20260515-6"></script>
+    <script src="script.js?v=20260515-7"></script>
   </body>
 </html>
 

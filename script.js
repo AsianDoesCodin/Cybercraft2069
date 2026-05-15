@@ -34,11 +34,14 @@ const dom = {
   donateModalCopy: document.querySelector("[data-donate-modal-copy]"),
   openDonateModalButtons: [...document.querySelectorAll("[data-open-donate-modal]")],
   closeDonateModalButtons: [...document.querySelectorAll("[data-close-donate-modal]")],
+  storeTabButtons: [...document.querySelectorAll("[data-store-tab]")],
+  storePanels: [...document.querySelectorAll("[data-store-panel]")],
   cityCanvas: document.querySelector("#cityCanvas"),
 };
 
 function init() {
   bindNavigation();
+  bindStoreTabs();
   bindPlatformModal();
   bindDonateModal();
   dom.refreshStatus?.addEventListener("click", () => refreshServerStatus());
@@ -46,6 +49,30 @@ function init() {
   routeTo(getRouteFromHash());
   refreshServerStatus();
   window.setInterval(refreshServerStatus, SERVER_CONFIG.refreshMs);
+}
+
+function bindStoreTabs() {
+  dom.storeTabButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      showStoreTab(button.dataset.storeTab);
+    });
+  });
+}
+
+function showStoreTab(tabName = "ranks") {
+  const nextTab = dom.storePanels.some((panel) => panel.dataset.storePanel === tabName) ? tabName : "ranks";
+
+  dom.storeTabButtons.forEach((button) => {
+    const isActive = button.dataset.storeTab === nextTab;
+    button.classList.toggle("active", isActive);
+    button.setAttribute("aria-pressed", String(isActive));
+  });
+
+  dom.storePanels.forEach((panel) => {
+    const isActive = panel.dataset.storePanel === nextTab;
+    panel.hidden = !isActive;
+    panel.classList.toggle("active", isActive);
+  });
 }
 
 function bindNavigation() {
