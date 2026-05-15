@@ -557,7 +557,7 @@ h3 {
   background:
     linear-gradient(90deg, rgba(67, 232, 255, 0.14), rgba(8, 10, 15, 0.12) 42%),
     linear-gradient(180deg, rgba(255, 63, 209, 0.14), rgba(8, 10, 15, 0.92)),
-    url("assets/cybercraft-banner-logo.png") center 34% / min(760px, 80vw) auto no-repeat,
+    url("assets/newlogo.jpg") center 34% / min(520px, 60vw) auto no-repeat,
     #090d13;
 }
 
@@ -688,7 +688,7 @@ h3 {
   padding: clamp(20px, 4vw, 30px);
   background:
     linear-gradient(90deg, rgba(8, 10, 15, 0.92), rgba(8, 10, 15, 0.62)),
-    url("assets/cybercraft-banner-logo.png") right center / min(420px, 44vw) auto no-repeat,
+    url("assets/newlogo.jpg") right center / min(260px, 30vw) auto no-repeat,
     rgba(14, 17, 23, 0.9);
 }
 
@@ -1436,7 +1436,7 @@ h3 {
   .store-intro-card {
     background:
       linear-gradient(90deg, rgba(8, 10, 15, 0.94), rgba(8, 10, 15, 0.78)),
-      url("assets/cybercraft-banner-logo.png") right center / min(320px, 70vw) auto no-repeat,
+      url("assets/newlogo.jpg") right center / min(220px, 48vw) auto no-repeat,
       rgba(14, 17, 23, 0.9);
   }
 
